@@ -8,14 +8,16 @@ public class ObjectStreamExample {
 
 	public static void main(String[] args) throws Exception {
 
-		writeList();
-		List<Board> list = readList();
+		writeList();	// ÀúÀå
+		List<Board> list = readList();	// ÀúÀåµÈ°É ²ø¾î¿È
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		for (Board board : list) {
-			System.out.println(board.getBno() + "\t" + board.getTitle() + "\t" + board.getContent() + "\t"
-					+ board.getWriter() + "\t" + sdf.format(board.getDate()));
-		}
+		
+		  for (Board board : list) { System.out.println(board.getBno() + "\t" +
+		  board.getTitle() + "\t" + board.getContent() + "\t" + board.getWriter() +
+		  "\t" + sdf.format(board.getDate())); }
+		 
+		 
 	}
 
 	public static void writeList() throws Exception {
